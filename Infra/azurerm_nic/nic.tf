@@ -11,7 +11,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 data "azurerm_subnet" "subnet" {
-  name                 = "subnetdev"
-  virtual_network_name = "vnetdev1"
-  resource_group_name  = "rgDev1"
+  name                 = "subnetqa"
+  virtual_network_name = "vnetqa"
+  resource_group_name  = "rgqanew"
 }
