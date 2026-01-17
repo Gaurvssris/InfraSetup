@@ -14,6 +14,7 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
+    backendServiceArm: 'EnvironmentDevProdQA'
     backendAzureRmStorageAccountName: 'storageproduction9838'
     backendAzureRmContainerName: 'container9838'
     backendAzureRmKey: '1234'
