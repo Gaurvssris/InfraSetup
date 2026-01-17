@@ -4,7 +4,8 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: DevProdQApool
+
 
 steps:
 - task: TerraformTask@5
