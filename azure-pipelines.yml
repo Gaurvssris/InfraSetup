@@ -20,3 +20,10 @@ steps:
     backendAzureRmStorageAccountName: 'storageproduction9838'
     backendAzureRmContainerName: 'container9838'
     backendAzureRmKey: '1234'
+- task: TerraformTask@5
+  displayName: plan
+  inputs:
+    provider: 'azurerm'
+    command: 'plan'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Prod'
+    environmentServiceNameAzureRM: 'EnvironmentDevProdQA'
