@@ -9,7 +9,6 @@ pool:
 
 steps:
 - task: TerraformTask@5
-  displayName: init
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -17,6 +16,7 @@ steps:
     backendServiceArm: 'EnvironmentDevProdQA'
     backendAzureRmStorageAccountName: 'storagegauravssris'
     backendAzureRmContainerName: 'storagecontainer38'
+    backendAzureRmKey: '123456'
 - task: TerraformTask@5
   displayName: plan
   inputs:
