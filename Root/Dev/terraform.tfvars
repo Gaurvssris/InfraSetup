@@ -1,6 +1,6 @@
-resource = {
+resource  = {
   Resourcename1 = {
-    name     = "rgDev29"
+    name     = "rgDev"
     location = "centralindia"
 
   }
@@ -8,29 +8,29 @@ resource = {
 strg1 = {
     StorageAccount1 = {
         name ="strgdev98380844110"
-        rg_name = "rgDev29"
+        rg_name = "rgDev"
         location = "EastUS"
     }
 }
 vnetd ={
     vnet1 ={
- vnet_name= "vnetdev29"
- rg_name = "rgDev29"
+ vnet_name= "vnetdev"
+ rg_name = "rgDev"
         location = "EastUS"
     }
 }
 subnetd = {
     subnet1 ={
         name ="subnetdev"
-        name2= "vnetdev29"
- name1     = "rgDev29"
+        name2= "vnetdev"
+ name1     = "rgDev"
     location = "EastUS"
     }
 }
 nicname = {
   nic1 ={
-    name = "nicDev29"
-    resource_group_name     = "rgDev29"
+    name = "nicDev"
+    resource_group_name     = "rgDev"
     location = "EastUS"
  
   }
@@ -38,8 +38,8 @@ nicname = {
 }
 vmdev = {
   Virtualmachine1 ={
-    name ="VirtualmachineDev29"
+    name ="VirtualmachineDev"
     location ="EastUS"
-    resource_group_name     = "rgDev29"
+    resource_group_name     = "rgDev"
   }
 }
