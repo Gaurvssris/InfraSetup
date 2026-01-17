@@ -7,4 +7,15 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'EnvironmentDevProdQA'
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendAzureRmStorageAccountName: 'storageproduction9838'
+    backendAzureRmContainerName: 'container9838'
+    backendAzureRmKey: '1234'
