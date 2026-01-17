@@ -1,6 +1,6 @@
 resource = {
 Resourcename1 = {
-    name     = "rgProd"
+    name     = "rgProd1"
     location = "EastUS"
 
   }
@@ -8,30 +8,30 @@ Resourcename1 = {
 strg1 = {
     StorageAccount1 = {
         name ="strgprod98380844110"
-        rgname = "rgProd"
+        rg_name = "rgProd1"
         location = "EastUS"
     }
 
 }
 vnetd ={
     vnet1 ={
- name= "vnetProd1"
-  rgname = "rgProd"
+ vnet_name= "vnetProd1"
+  rg_name = "rgProd1"
     location = "EastUS"
     }
 }
 subnetd = {
     subnet1 ={
         name ="subnetProd"
-        vnet_name= "vnetProd1"
-resource_group_name = "rgProd"
+        name2= "vnetProd1"
+name1 = "rgProd1"
     location = "EastUS"
     }
 }
 nicname = {
   nic1 ={
     name = "nicProd"
-    resource_group_name     = "rgProd"
+    resource_group_name     = "rgProd1"
     location = "EastUS"
   }
 
@@ -40,6 +40,6 @@ vmdev = {
   Virtualmachine1 ={
     name ="VirtualmachineProd1"
     location ="EastUS"
-    resource_group_name     = "rgProd"
+    resource_group_name     = "rgProd1"
   }
 }

@@ -11,7 +11,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 data "azurerm_subnet" "subnet" {
-  name                 = "subnetdev"
-  virtual_network_name = "vnetdev29"
-  resource_group_name  = "rgDev29"
+  name                 = "subnetProd"
+  virtual_network_name = "vnetProd1"
+  resource_group_name  = "rgProd1"
 }

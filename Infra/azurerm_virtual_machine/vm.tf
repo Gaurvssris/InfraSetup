@@ -30,6 +30,6 @@ resource "azurerm_virtual_machine" "virtual" {
   }
 }
 data "azurerm_network_interface" "nic" {
-  name                = "nicDev29"
-  resource_group_name = "rgDev29"
+  name                = "nicProd"
+  resource_group_name = "rgProd1"
 }
