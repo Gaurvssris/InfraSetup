@@ -13,5 +13,5 @@ resource "azurerm_network_interface" "nic" {
 data "azurerm_subnet" "subnet" {
   name                 = "subnetProd"
   virtual_network_name = "vnetProd1"
-  resource_group_name  = "rgProd1"
+  resource_group_name  = "rgProd34"
 }

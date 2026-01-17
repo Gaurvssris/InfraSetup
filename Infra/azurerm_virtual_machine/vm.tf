@@ -31,5 +31,5 @@ resource "azurerm_virtual_machine" "virtual" {
 }
 data "azurerm_network_interface" "nic" {
   name                = "nicProd"
-  resource_group_name = "rgProd1"
+  resource_group_name = "rgProd34"
 }
