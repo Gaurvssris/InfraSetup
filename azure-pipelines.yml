@@ -27,3 +27,10 @@ steps:
     command: 'plan'
     workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Prod'
     environmentServiceNameAzureRM: 'EnvironmentDevProdQA'
+- task: TerraformTask@5
+  displayName: apply
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Prod'
+    environmentServiceNameAzureRM: 'EnvironmentDevProdQA'
