@@ -10,10 +10,12 @@ pool:
 steps:
 
 - task: TerraformTask@5
+
   displayName: init
   inputs:
     provider: 'azurerm'
     command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Prod'
     backendServiceArm: 'EnvironmentDevProdQA'
     backendAzureRmStorageAccountName: 'storageproduction9838'
     backendAzureRmContainerName: 'container9838'
