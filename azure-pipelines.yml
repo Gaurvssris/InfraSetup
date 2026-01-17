@@ -8,7 +8,6 @@ pool:
 
 
 steps:
-
 - task: TerraformTask@5
   displayName: init
   inputs:
