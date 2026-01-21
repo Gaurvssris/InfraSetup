@@ -1,42 +1,42 @@
 resource = {
 Resourcename1 = {
-    name     = "rgqanew"
+    name     = "rgqa"
     location = "EastUS"
   }
 }
-strg1 = {
+strg = {
     StorageAccount1 = {
         name ="strgqa98380844110"
-        rgname = "rgqanew"
+        rg_name = "rgqa"
         location = "EastUS"
     }
 }
-vnetq ={
+vnet ={
     vnet1 ={
- name= "vnetqa"
-  rgname = "rgqanew"
+ vnet_name= "vnetqa"
+  rg_name = "rgqa"
     location = "EastUS"
     }
 }
-subnetq = {
+subnet = {
     subnet1 ={
         name ="subnetqa"
-        vnet_name= "vnetqa"
-resource_group_name = "rgqanew"
+        name2 = "vnetqa"
+name1 = "rgqa"
     location = "EastUS"
     }
 }
-nicq = {
+nic = {
   nic1 ={
     name = "nicqa"
-    resource_group_name     = "rgqanew"
+    resource_group_name     = "rgqa"
     location = "EastUS"
   }
 }
-vmqa = {
+vmachine = {
   Virtualmachine1 ={
     name ="VirtualmachineQA"
     location ="EastUS"
-    resource_group_name     = "rgqanew"
+    resource_group_name     = "rgqa"
   }
 }

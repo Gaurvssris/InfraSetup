@@ -1,32 +1,32 @@
 module "resource" {
-  source = "../../Infra/azurerm_resource_group"
+  source = "../../InfraProd/azurerm_resource_group"
   rg     = var.resource
 }
 module "storage" {
     depends_on = [ module.resource ]
-    source ="../../Infra/azurerm_storage_account"
-    strg = var.strg1
+    source ="../../InfraProd/azurerm_storage_account"
+    strg = var.strg
 }
 module "Vnet" {
     depends_on = [ module.resource ]
-    source = "../../Infra/azurerm_virtual_network"
-    vnet =var.vnetd
+    source = "../../InfraProd/azurerm_virtual_network"
+    vnet =var.vnet
 }
 module "Subnet" {
     depends_on = [ module.Vnet]
-    source = "../../Infra/azurerm_subnet"
-    subnetG =var.subnetd
+    source = "../../InfraProd/azurerm_subnet"
+    subnetG =var.subnet
   
 }
 module "nic" {
     depends_on = [module.Subnet]
-        source = "../../Infra/azurerm_nic"
+        source = "../../InfraProd/azurerm_nic"
     nic = var.nicname
 
 }
 module "vm" {
     depends_on = [ module.nic ]
-    source = "../../Infra/azurerm_virtual_machine"
-    vm =var.vmdev
+    source = "../../InfraProd/azurerm_virtual_machine"
+    vm =var.vmachine
   
 }

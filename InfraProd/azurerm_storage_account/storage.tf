@@ -1,5 +1,5 @@
 
-resource "azurerm_storage_account" "storage1" {
+resource "azurerm_storage_account" "storage00" {
   for_each = var.strg
 
   name                     = each.value.name

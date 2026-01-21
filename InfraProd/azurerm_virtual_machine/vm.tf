@@ -1,4 +1,4 @@
-resource "azurerm_virtual_machine" "virtual" {
+resource "azurerm_virtual_machine" "virtual00" {
     for_each = var.vm
   name                  = each.value.name
   location              = each.value.location
@@ -15,7 +15,7 @@ resource "azurerm_virtual_machine" "virtual" {
     version   = "latest"
   }
   storage_os_disk {
-    name              = "myosdisk1"
+    name              = "prodmyosdisk1"
     caching           = "ReadWrite"
     create_option     = "FromImage"
     managed_disk_type = "Standard_LRS"
@@ -31,5 +31,5 @@ resource "azurerm_virtual_machine" "virtual" {
 }
 data "azurerm_network_interface" "nic" {
   name                = "nicProd"
-  resource_group_name = "rgProd34"
+  resource_group_name = "rgProd"
 }

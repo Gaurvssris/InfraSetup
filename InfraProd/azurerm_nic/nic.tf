@@ -1,4 +1,4 @@
-resource "azurerm_network_interface" "nic" {
+resource "azurerm_network_interface" "nic00" {
     for_each = var.nic
   name                = each.value.name
   location            = each.value.location
@@ -12,6 +12,6 @@ resource "azurerm_network_interface" "nic" {
 }
 data "azurerm_subnet" "subnet" {
   name                 = "subnetProd"
-  virtual_network_name = "vnetProd1"
-  resource_group_name  = "rgProd34"
+  virtual_network_name = "vnetProd"
+  resource_group_name  = "rgProd"
 }

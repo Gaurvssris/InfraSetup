@@ -1,6 +1,6 @@
 variable "resource" {}
-variable "strg1" {}
-variable "vnetd" {}
-variable "subnetd" {}
+variable "strg" {}
+variable "vnet" {}
+variable "subnet" {}
 variable "nicname" {}
-variable "vmdev" {}
+variable "vmachine" {}
