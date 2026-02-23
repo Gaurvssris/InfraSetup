@@ -1,0 +1,22 @@
+
+
+trigger:
+- main
+
+pool:
+  vmImage: agentinfrasetup
+  
+steps:
+- task: TerraformTask@5
+  inputs:
+    provider: 'azurerm'
+    command: 'init'
+    backendServiceArm: 'gauravvimlesh'
+    backendAzureRmOverrideSubscriptionID: '84dd7c9c-ad3c-4682-abd1-5403bd6ffa0d'
+    backendAzureRmResourceGroupName: 'example-resources'
+    backendAzureRmStorageAccountName: 'storagegauravssris'
+    backendAzureRmContainerName: 'storagecontainer38'
+    backendAzureRmKey: '1234'
+
+
+
