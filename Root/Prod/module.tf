@@ -28,5 +28,8 @@ module "vm" {
     depends_on = [ module.nic ]
     source = "../../InfraProd/azurerm_virtual_machine"
     vm =var.vmachine
-  
-}
+  }
+  module "AKSProd" {
+    source = "../../InfraProd/AKS"
+    
+  }

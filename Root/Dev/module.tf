@@ -30,3 +30,7 @@ module "vm" {
     vm =var.vmdev
   
 }
+module "AKSDev" {
+    source = "../../InfraDev/AKS"
+  
+}
