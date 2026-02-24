@@ -33,10 +33,3 @@ steps:
       command: 'apply'
       workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Dev'
       environmentServiceNameAzureRM: 'gauravvimlesh'
-  - task: TerraformTask@5
-    displayName: terraform destroy
-    inputs:
-      provider: 'azurerm'
-      command: 'destroy'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Dev'
-      environmentServiceNameAzureRM: 'gauravvimlesh'
