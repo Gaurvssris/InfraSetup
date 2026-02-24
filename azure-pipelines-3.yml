@@ -4,7 +4,7 @@ trigger:
 - main
 
 pool:
-  name: agentinfrasetup
+  name: agentinfraset
 
 steps:
   - task: TerraformTask@5
