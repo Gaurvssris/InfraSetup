@@ -17,15 +17,4 @@ steps:
       backendAzureRmStorageAccountName: 'storagegauravssris'
       backendAzureRmContainerName: 'storagecontainer38'
       backendAzureRmKey: 'backup'
-  - task: TerraformTask@5
-    inputs:
-      provider: 'azurerm'
-      command: 'plan'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/Gaurvssris/InfraSetup/'
-      environmentServiceNameAzureRM: 'gauravvimlesh'
-  - task: TerraformTask@5
-    inputs:
-      provider: 'azurerm'
-      command: 'apply'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/Gaurvssris/InfraSetup'
-      environmentServiceNameAzureRM: 'gauravvimlesh'
+
