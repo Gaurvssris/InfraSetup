@@ -11,8 +11,9 @@ steps:
     inputs:
       provider: 'azurerm'
       command: 'init'
-      workingDirectory: '$(System.DefaultWorkingDirectory)/Gaurvssris/InfraSetup'
+      workingDirectory: '$(System.DefaultWorkingDirectory)/Gaurvssris/InfraSetup/blob/main/Root/Dev'
       backendServiceArm: 'gauravvimlesh'
+      backendAzureRmResourceGroupName: 'example-resources'
       backendAzureRmStorageAccountName: 'storagegauravssris'
       backendAzureRmContainerName: 'storagecontainer38'
       backendAzureRmKey: 'backup'
