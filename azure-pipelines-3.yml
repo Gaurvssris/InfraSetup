@@ -1,0 +1,18 @@
+
+
+trigger:
+- main
+
+pool:
+  name: agentinfrasetup
+
+steps:
+  - task: TerraformTask@5
+    inputs:
+      provider: 'azurerm'
+      command: 'init'
+      backendServiceArm: 'gauravvimlesh'
+      backendAzureRmStorageAccountName: 'storagegauravssris'
+      backendAzureRmContainerName: 'storagecontainer38'
+      backendAzureRmKey: 'backup'
+
