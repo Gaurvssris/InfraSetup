@@ -16,5 +16,5 @@ steps:
       backendAzureRmResourceGroupName: 'example-resources'
       backendAzureRmStorageAccountName: 'storagegauravssris'
       backendAzureRmContainerName: 'storagecontainer38'
-      backendAzureRmKey: 'backup.tf'
+      backendAzureRmKey: 'backup.tfstate'
 
