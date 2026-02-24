@@ -17,3 +17,10 @@ steps:
     backendAzureRmStorageAccountName: 'storagegauravssris'
     backendAzureRmContainerName: 'storagecontainer38'
     backendAzureRmKey: 'backup.tfstate'
+- task: TerraformTask@5
+  displayName: terraform apply
+  inputs:
+    provider: 'azurerm'
+    command: 'apply'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Root/QA'
+    environmentServiceNameAzureRM: 'gauravssris'
