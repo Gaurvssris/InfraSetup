@@ -6,14 +6,40 @@ trigger:
 pool:
   name: agentinfraset
 
-steps:
-- task: TerraformTask@5
-  displayName: terraform init
-  inputs:
-    provider: 'azurerm'
-    command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Dev'
-    backendServiceArm: 'gauravssris1'
-    backendAzureRmStorageAccountName: 'storagegauravssris'
-    backendAzureRmContainerName: 'storagecontainer38'
-    backendAzureRmKey: 'backup.tfstate'
+stages:
+  - stage: cistage
+    jobs:
+      - job: cijob
+        displayName: cistage
+        steps:
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                # Write your PowerShell commands here.
+                
+                Write-Host "Hello World"
+  - stage: cdstage
+    jobs:
+      - job: cdjob
+        steps:
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                # Write your PowerShell commands here.
+                
+                Write-Host "Hello Gaurav"
+
+
+# steps:
+# - task: TerraformTask@5
+#   displayName: terraform init
+#   inputs:
+#     provider: 'azurerm'
+#     command: 'init'
+#     workingDirectory: '$(System.DefaultWorkingDirectory)/Root/Dev'
+#     backendServiceArm: 'gauravssris1'
+#     backendAzureRmStorageAccountName: 'storagegauravssris'
+#     backendAzureRmContainerName: 'storagecontainer38'
+#     backendAzureRmKey: 'backup.tfstate'
