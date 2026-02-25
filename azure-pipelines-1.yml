@@ -46,16 +46,14 @@ stages:
     jobs:
       - job: stage9838
         steps:
-          - task: ArchiveFiles@2
-            inputs:
-              rootFolderOrFile: '$(Build.BinariesDirectory)'
-              includeRootFolder: true
-              archiveType: 'zip'
-              archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-              replaceExistingArchive: true
-          -    
-
- 
+        - task: PowerShell@2
+          inputs:
+            targetType: 'inline'
+            script: |
+              # Write your PowerShell commands here.
+              
+              Write-Host "Hello World new"
+          
 
 # steps:
 # - task: TerraformTask@5
