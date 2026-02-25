@@ -1,7 +1,7 @@
 
 
 trigger:
-- main
+# - main
 
 pool:
   name: agentinfraset
