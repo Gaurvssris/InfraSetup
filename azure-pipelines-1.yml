@@ -30,7 +30,20 @@ stages:
                 # Write your PowerShell commands here.
                 
                 Write-Host "Hello Gaurav"
+  - stage: newstage
+    jobs:
+      - job: newstage
+        steps:
 
+          - task: PowerShell@2
+            inputs:
+              targetType: 'inline'
+              script: |
+                # Write your PowerShell commands here.
+                
+                Write-Host "Hello India"
+
+ 
 
 # steps:
 # - task: TerraformTask@5
